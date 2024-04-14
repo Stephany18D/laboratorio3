@@ -14,27 +14,25 @@ private:
   double saldo;
 
 public:
-  // Constructor por defecto
   CuentaCorriente();
 
-  // Constructor con parámetros
   CuentaCorriente(string nombre, string apellidos, string direccion, string telefono, double saldo);
 
-  // Setters
   void setNombre(string nombre);
-  void setApellidos(string apellidos);
-  void setDireccion(string direccion);
-  void setTelefono(string telefono);
-  void setSaldo(double saldo);
-
-  // Getters
   string getNombre() const;
+
+  void setApellidos(string apellidos);
   string getApellidos() const;
+
+  void setDireccion(string direccion);
   string getDireccion() const;
+
+  void setTelefono(string telefono);
   string getTelefono() const;
+
+  void setSaldo(double saldo);
   double getSaldo() const;
 
-  // Métodos
   void retirarDinero(double cantidad);
   void ingresarDinero(double cantidad);
   void consultarCuenta();
