@@ -1,6 +1,5 @@
 #include "cuentacorriente.h"
 
-// Constructor por defecto
 CuentaCorriente::CuentaCorriente() {
   nombre = "";
   apellidos = "";
@@ -9,7 +8,6 @@ CuentaCorriente::CuentaCorriente() {
   saldo = 0;
 }
 
-// Constructor con parámetros
 CuentaCorriente::CuentaCorriente(string nombre, string apellidos, string direccion, string telefono, double saldo) {
   this->nombre = nombre;
   this->apellidos = apellidos;
@@ -18,7 +16,6 @@ CuentaCorriente::CuentaCorriente(string nombre, string apellidos, string direcci
   this->saldo = saldo;
 }
 
-// Setters y getters
 void CuentaCorriente::setNombre(string nombre) {
   this->nombre = nombre;
 }
@@ -59,30 +56,31 @@ double CuentaCorriente::getSaldo() const {
   return saldo;
 }
 
-// Métodos
 void CuentaCorriente::retirarDinero(double cantidad) {
   if (cantidad > saldo) {
-    cout << "Error: La cantidad a retirar es mayor que el saldo disponible." << endl;
+    cout << "Error: La cantidad que quiere retirar es mayor que el saldo actual." << endl;
   } else {
     saldo -= cantidad;
-    cout << "Retiro realizado con éxito. Su nuevo saldo es: " << saldo << endl;
+    cout << "Retiro realizado. Su nuevo saldo es: " << saldo << endl;
   }
 }
 
 void CuentaCorriente::ingresarDinero(double cantidad) {
   if (cantidad <= 0) {
-    cout << "Error: La cantidad a ingresar debe ser un valor positivo." << endl;
+    cout << "Error: ingresa un valor positivo." << endl;
   } else {
     saldo += cantidad;
-    cout << "Ingreso realizado con éxito. Su nuevo saldo es: " << saldo << endl;
+    cout << "Ingreso realizado. Su nuevo saldo es: " << saldo << endl;
   }
 }
 
 void CuentaCorriente::consultarCuenta() {
   cout << "-------------------------------------------------------" << endl;
-  cout << "Nombre: " << nombre << " " << apellidos << endl;
-  cout << "Dirección: " << direccion << endl;
-  cout << "Teléfono: " << telefono << endl;
+  cout << "Datos de la cuenta: " << endl;
+  cout << "Nombre: " << nombre << endl;
+  cout << "Apellidos: " << apellidos << endl;
+  cout << "Direccion: " << direccion << endl;
+  cout << "Telefono: " << telefono << endl;
   cout << "Saldo: " << saldo << endl;
   cout << "-------------------------------------------------------" << endl;
 }
