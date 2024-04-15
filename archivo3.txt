@@ -1,0 +1,2 @@
+Resultados de la busqueda:
+La cadena "hola" se repite 6 veces en el texto.
